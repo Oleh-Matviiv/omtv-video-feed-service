@@ -1,9 +1,9 @@
 import express from 'express';
-import axios from 'axios';
+
+import fetchVideos from './fetchVideos';
 
 const app = express();
 const port = 3000;
-const videosUrl = 'https://cdn.playbuzz.com/content/feed/resources';
 
 export const getFilter = (filter) => {
   const allowedFilters = ['facebook', 'youtube', 'url'];
@@ -13,8 +13,13 @@ export const getFilter = (filter) => {
 
 app.get('/videos', async (req, res) => {
   try {
-    const videos = await axios.get(videosUrl);
+    const videos = await fetchVideos();
+    if (!videos || !videos.data || videos.items) {
+      throw new Error('Wrong response data structure');
+    }
+
     const filter = getFilter(req.query.filter);
+
     res.send(filter
       ? videos.data.items.filter(i => i.source === filter)
       : videos.data.items
