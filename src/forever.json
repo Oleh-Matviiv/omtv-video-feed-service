@@ -6,5 +6,6 @@
   "sourceDir": "/home/omatviiv/video-feed-service",
   "logFile": "/home/omatviiv/video-feed-service/forever.log",
   "outFile": "/home/omatviiv/video-feed-service/out.log",
-  "errFile": "/home/omatviiv/video-feed-service/error.log"
+  "errFile": "/home/omatviiv/video-feed-service/error.log",
+  "arts": ["--experimental-modules"]
 }
