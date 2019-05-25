@@ -5,6 +5,11 @@ const app = express();
 const port = 3000;
 const videosUrl = 'https://cdn.playbuzz.com/content/feed/resources';
 
+export const getFilter = (filter) => {
+  const allowedFilters = ['facebook', 'youtube', 'url'];
+  return null;
+};
+
 app.get('/videos', async (req, res) => {
   try {
     const videos = await axios.get(videosUrl);
@@ -17,3 +22,5 @@ app.get('/videos', async (req, res) => {
 });
 
 app.listen(port, () => console.log(`listening on port ${port}`));
+
+export default app;

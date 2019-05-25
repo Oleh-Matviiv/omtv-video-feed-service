@@ -18,10 +18,38 @@
   },
   "homepage": "https://github.com/Oleh-Matviiv/omtv-video-feed-service#readme",
   "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/plugin-proposal-object-rest-spread": "^7.4.4",
+    "@babel/plugin-transform-react-jsx": "^7.3.0",
+    "@babel/plugin-transform-runtime": "^7.4.4",
+    "@babel/polyfill": "^7.4.4",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/runtime": "^7.4.5",
+    "babel-jest": "^24.8.0",
+    "jest": "^24.8.0",
     "nodemon": "^1.19.0"
   },
   "dependencies": {
     "axios": "^0.18.0",
     "express": "^4.17.0"
+  },
+  "jest": {
+    "verbose": true,
+    "rootDir": "src",
+    "moduleFileExtensions": [
+      "js",
+      "jsx",
+      "node",
+      "mjs"
+    ],
+    "transform": {
+      ".*m?js": "babel-jest"
+    },
+    "testMatch": [
+      "**/*.test.mjs"
+    ]
   }
 }
