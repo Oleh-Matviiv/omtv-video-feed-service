@@ -1,7 +1,7 @@
-[-] test endpoint
 
 -------------------------------[done]------------------------------------------
 
+[done] test endpoint
 [done] implement filtering by source
 [done] add jest
 [done] videos endpoint

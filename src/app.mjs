@@ -3,7 +3,6 @@ import express from 'express';
 import fetchVideos from './fetchVideos';
 
 const app = express();
-const port = 3000;
 
 export const getFilter = (filter) => {
   const allowedFilters = ['facebook', 'youtube', 'url'];
@@ -15,7 +14,7 @@ app.get('/videos', async (req, res) => {
   try {
     const videos = await fetchVideos();
     if (!videos || !videos.data || videos.items) {
-      throw new Error('Wrong response data structure');
+      throw new Error('Unexpected response data structure');
     }
 
     const filter = getFilter(req.query.filter);
@@ -30,7 +29,5 @@ app.get('/videos', async (req, res) => {
     res.send('fetching videos from cdn.playbuzz.com failed');
   }
 });
-
-app.listen(port, () => console.log(`listening on port ${port}`));
 
 export default app;

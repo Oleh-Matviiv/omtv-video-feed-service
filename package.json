@@ -2,9 +2,9 @@
   "name": "omtv-video-feed-service",
   "version": "1.0.0",
   "description": "provides list of videos from different sources",
-  "main": "index.mjs",
+  "main": "server.mjs",
   "scripts": {
-    "start": "nodemon --experimental-modules src/index.mjs",
+    "start": "nodemon --experimental-modules src/server.mjs",
     "test": "npm run test"
   },
   "repository": {
@@ -30,7 +30,9 @@
     "@babel/runtime": "^7.4.5",
     "babel-jest": "^24.8.0",
     "jest": "^24.8.0",
-    "nodemon": "^1.19.0"
+    "nodemon": "^1.19.0",
+    "superagent": "^5.0.5",
+    "supertest": "^4.0.2"
   },
   "dependencies": {
     "axios": "^0.18.0",
