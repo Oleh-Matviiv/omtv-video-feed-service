@@ -1,0 +1,10 @@
+{
+  "uid": "omtv-video-feed-service",
+  "append": true,
+  "watch": true,
+  "script": "server.mjs",
+  "sourceDir": "/home/omatviiv/video-feed-service",
+  "logFile": "/home/omatviiv/video-feed-service/forever.log",
+  "outFile": "/home/omatviiv/video-feed-service/out.log",
+  "errFile": "/home/omatviiv/video-feed-service/error.log"
+}

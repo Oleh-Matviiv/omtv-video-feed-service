@@ -1,6 +1,7 @@
 
 -------------------------------[done]------------------------------------------
 
+[done] deploy
 [done] test endpoint
 [done] implement filtering by source
 [done] add jest

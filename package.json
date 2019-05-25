@@ -5,6 +5,7 @@
   "main": "server.mjs",
   "scripts": {
     "start": "nodemon --experimental-modules src/server.mjs",
+    "deploy": ". ./scripts/deploy.sh",
     "test": "npm run test"
   },
   "repository": {
