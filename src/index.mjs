@@ -7,13 +7,18 @@ const videosUrl = 'https://cdn.playbuzz.com/content/feed/resources';
 
 export const getFilter = (filter) => {
   const allowedFilters = ['facebook', 'youtube', 'url'];
-  return null;
+  
+  return allowedFilters.find(f => f === filter) || null;
 };
 
 app.get('/videos', async (req, res) => {
   try {
     const videos = await axios.get(videosUrl);
-    res.send(videos.data.items);
+    const filter = getFilter(req.query.filter);
+    res.send(filter
+      ? videos.data.items.filter(i => i.source === filter)
+      : videos.data.items
+    );
   } catch(error) {
     console.log(error);
     res.status(500);

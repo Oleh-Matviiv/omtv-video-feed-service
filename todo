@@ -1,8 +1,8 @@
-[-] implement filtering by source
 [-] test endpoint
 
 -------------------------------[done]------------------------------------------
 
+[done] implement filtering by source
 [done] add jest
 [done] videos endpoint
 [done] simplest express app
