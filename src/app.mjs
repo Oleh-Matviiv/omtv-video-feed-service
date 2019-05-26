@@ -1,8 +1,10 @@
 import express from 'express';
+import cors from 'cors';
 
 import fetchVideos from './fetchVideos';
 
 const app = express();
+app.use(cors());
 
 export const getFilter = (filter) => {
   const allowedFilters = ['facebook', 'youtube', 'url'];
